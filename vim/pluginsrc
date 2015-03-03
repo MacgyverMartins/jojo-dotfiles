@@ -23,6 +23,11 @@ nnoremap  <d-2> :colorscheme Tomorrow-night<cr>
 
 
 "}}}
+
+"Vim-JSX {{{
+Plug 'mxw/vim-jsx'
+"}}}
+
 "Movements{{{
 Plug 'tpope/vim-surround'
 Plug 'rhysd/clever-f.vim'
@@ -248,12 +253,12 @@ let g:ctrlp_max_height= 15
 let g:ctrlp_extensions = ['funky']
 
 "if has('gui_macvim')
-  "let g:ctrlp_map = '<D-p>'
+"let g:ctrlp_map = '<D-p>'
 "else
-  "let g:ctrlp_map ='π'
+"let g:ctrlp_map ='π'
 "endif
 
-  let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map = '<leader>p'
 "}}}
 "CtrlPCmdPalette                                                                                                Config {{{1
 noremap <D-P> :CtrlPMRUFiles <cr>
