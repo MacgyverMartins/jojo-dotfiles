@@ -355,7 +355,6 @@ let g:lightline = {
       \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
-      \   'yolow': 'Yolow',
       \   'vln': 'VisualLnumbers',
       \   'filetype': 'MyFiletype',
       \   'fileencoding': 'MyFileencoding',
