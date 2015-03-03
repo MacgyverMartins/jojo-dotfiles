@@ -52,11 +52,10 @@ export PATH
 alias d="cd ~/Desktop/"
 
 alias zshrc="vim ~/dotfiles/zshrc"
+alias doti="~/dotfiles/"
 alias cls="clear"
 alias pathogen="cd ~/dotfiles/vim/bundle/"
-alias typefoo="cd ~/Work/TypeFoo/projects"
-alias frontend="cd ~/Developer/FrontEnd"
-alias dev="cd ~/Developer/"
+alias pj="cd ~/Projetos/"
 
 function new()
 {
