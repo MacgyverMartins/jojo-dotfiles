@@ -1,7 +1,7 @@
 # ~/.tmuxinator/onetalk.yml
 
 name: onetalk
-root: ~/Desktop/OneTalk/onetalk-node/
+root: ~/Projetos/core/
 
 
 # Optional tmux socket
@@ -26,6 +26,6 @@ windows:
   - editor:
       layout: c108,238x51,0,0[238x10,0,0,1,238x40,0,11,4]
       panes:
-        - gulp test
+        - gulp tdd
         - vim
   - server: npm start
