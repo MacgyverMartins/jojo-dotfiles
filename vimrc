@@ -2,7 +2,7 @@
 let g:configpath = "~/dotfiles/"
 let &t_Co=256
 let t_Co=256
-python import sys; sys.path.append("/Library/Python/2.7/site-packages")
+"python import sys; sys.path.append("/Library/Python/2.7/site-packages")
 "}}}
 "Performance config{{{
 "allows syntax a max of 130 chars
@@ -15,7 +15,11 @@ syntax sync minlines=200
 filetype plugin indent on
 syntax on
 syntax enable
-let mapleader=","        " muda o leader para comma
+set clipboard=unnamed
+set ttimeout
+set ttimeoutlen=50
+set notimeout
+let mapleader=" "        " muda o leader para comma
 set foldmethod=indent
 set foldlevel=99
 set pastetoggle=<F6>
@@ -39,7 +43,6 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo " These com
 set scrolloff=0 " When the page starts to scroll, keep the cursor 8 lines from the top and 8  lines from the bottom
 "set guicursor+=n:blinkwait7
 set guicursor=a:blinkon0
-set cursorline
 set virtualedit=all "para poder andar em espaços em branco (invalid spaces)
 set splitright          " Split new vertical windows right of current window.
 set splitbelow          " Split new horizontal windows under current window.
@@ -53,6 +56,7 @@ set shiftwidth=2
 "set cinkeys=0{,0},:,0#,!,!^f
 set cinkeys=0{,0},0[,0]
 set lazyredraw
+set nocuc nocul
 set magic " For regular expressions turn magic on
 set showmatch " Show matching brackets when text indicator is over them
 set mat=2 " How many tenths of a second to blink when matching brackets
@@ -90,7 +94,7 @@ set nobackup
 set nowb
 set noswapfile
 "set guifont=monaco\ for\ powerline:h12
-set guifont=PowerlineSymbols\ for\ Powerline:h13
+set guifont=PowerlineSymbols:h15
 set background=dark
 set cmdheight=1 " (sub-optimal) removes many press enter to continue prompts
 set list
@@ -101,11 +105,17 @@ set tags+=$home/.vim/tags/python.ctags
 set laststatus=2
 set tags+=./tags,tags;/
 set isk=/,:,.
+set copyindent
+set shiftround
+set foldnestmax=10
+set incsearch
+set autoread
+set undolevels=100
+set modeline
 "set dictionary+=~/dict
 "set complete+=k
 
 "Conditional Settings {{{
-
 if exists('+autochdir')"
   set autochdir
 else
@@ -151,15 +161,9 @@ au bufreadpost *
       \     execute 'normal! g`"zvzz' |
       \ endif
 
-autocmd filetype python set omnifunc=pythoncomplete#complete
 autocmd filetype php set omnifunc=phpcomplete#completephp
 autocmd BufEnter *.md set filetype=markdown
 
-
-" in ruby and scala, we use spaces (two) instead of tabs
-au BufRead,BufNewFile *.rb,*.scala set et sw=2 sts=2 ts=8
-" in python, we use spaces (four) instead of tabs
-au bufread,bufnewfile *.py set et
 
 "}}}
 "Improvements FTW {{{1
@@ -199,8 +203,8 @@ vnoremap <silent> * :<C-U>
 
 "}}}
 "Blink next search! {{{
-nnoremap <silent> n   n:call HLNext()<cr>
-nnoremap <silent> N   N:call HLNext()<cr>
+nnoremap <silent> n   n:call HLNext()<cr>zz
+nnoremap <silent> N   N:call HLNext()<cr>zz
 " OR ELSE just highlight the match in red...
 function! HLNext ()
   let [bufnum, lnum, col, off] = getpos('.')
@@ -270,6 +274,7 @@ function! s:nexttextobject(motion, dir)
   exe "normal! ".a:dir.c."v".a:motion.c
 endfunction
 
+
 " }}}
 "}}}
 "Utilities {{{
@@ -301,7 +306,7 @@ command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
 "}}}
 "VIMRC Mappings {{{1
 map <leader>vv :execute("e ".g:configpath."vimrc")<cr><c-w>
-map <leader>gv :execute("e ".g:configpath."vim/gvim.vim")<cr><c-w>
+map <leader>gv :execute("e ".g:configpath."gvimrc")<cr><c-w>
 map <leader>mp :execute("e ".g:configpath."vim/mappingsrc")<cr><c-w>
 map <leader>vp :execute("e ".g:configpath."vim/pluginsrc")<cr><c-w>
 "edit e reload rápido
@@ -310,57 +315,8 @@ nnoremap  <leader>so :call LoadingMsg("Loading vimrc...")<cr>:so $MYVIMRC<cr>
 "Load externals{{{1
 exe ('so '.g:configpath.'vim/pluginsrc')
 exe ('so '.g:configpath.'vim/mappingsrc')
-exe ('so '.g:configpath.'vim/gvim.vim')
+exe ('so '.g:configpath.'gvimrc')
 "}}}
 
 colorscheme gruvbox
-
-
-
-"augroup BgHighlight
-"autocmd!
-"autocmd WinEnter * set cul
-"autocmd WinLeave * set nocul
-"augroup END
-"augroup BgHighlight
-"autocmd!
-"autocmd WinEnter * filetype detect
-"autocmd WinLeave * set ft=
-"augroup END
-
-"Dim inactive windows using 'colorcolumn' setting
-"This tends to slow down redrawing, but is very useful.
-"Based on https://groups.google.com/d/msg/vim_use/IJU-Vk-QLJE/xz4hjPjCRBUJ
-"XXX: this will only work with lines containing text (i.e. not '~')
-"function! s:DimInactiveWindows()
-"for i in range(1, tabpagewinnr(tabpagenr(), '$'))
-"let l:range = ""
-"if i != winnr()
-"if &wrap
-"" HACK: when wrapping lines is enabled, we use the maximum number
-"" of columns getting highlighted. This might get calculated by
-"" looking for the longest visible line and using a multiple of
-"" winwidth().
-""let l:width=256 " max
-"let l:width=256 " max
-"else
-"let l:width=winwidth(i)
-"endif
-"let l:range = join(range(1, l:width), ',')
-"endif
-"call setwinvar(i, '&colorcolumn', l:range)
-"endfor
-"endfunction
-"augroup DimInactiveWindows
-"au!
-"au WinEnter * call s:DimInactiveWindows()
-"au WinEnter * set cursorline
-"au WinLeave * set nocursorline
-"augroup END
-set copyindent
-set shiftround
-set foldnestmax=10
-set incsearch
-set autoread
-set undolevels=100
-
+" vim: ts=2 fdm=marker fdl=0 ft=vim

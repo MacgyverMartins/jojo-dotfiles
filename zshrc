@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/oh-my-zsh
-MAILTO=
+
+#bind -r '\C-s'
+stty -ixon
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,6 +52,7 @@ export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export PATH
 alias d="cd ~/Desktop/"
+alias 7b="cd ~/Desktop/7blazes/git/"
 
 alias zshrc="vim ~/dotfiles/zshrc"
 alias doti="~/dotfiles/"
@@ -70,11 +73,18 @@ cd ~/dev/tools/jboss-as-7.1.1.Final/bin/
 }
 function myserver(){
 #ssh root@198.199.91.77
-ssh root@192.241.134.114
+ssh root@192.241.134.114 -p 7777
 }
 
 function jserver(){
 ssh root@104.131.15.81
+}
+function aserver(){
+ssh root@45.55.148.53 -p 7777
+}
+
+function lserver(){
+ssh deploy@45.55.148.53 -p 7777
 }
 
 
@@ -106,7 +116,16 @@ alias one="cd ~/Desktop/OneTalk/onetalk-node/"
 #alias juntos="cd ~/Desktop/Juntos/site/frontend/"
 alias 7blazes="cd ~/Desktop/7blazes/7blazes-components/"
 
+alias undocommit=" git reset --soft HEAD~1"
 
+alias vim="/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/Vim"
+
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
+
+alias todo='python ~/t/t.py --task-dir ~/tasks --list tasks'
+alias todotxt='todo.sh'
+alias t='todotxt-machine'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

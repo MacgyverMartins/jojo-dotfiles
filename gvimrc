@@ -21,6 +21,7 @@ if has('gui_running')
     macmenu Window.Minimize key=<nop>
     macmenu Tools.List\ Errors key=<nop>
     macmenu Edit.Find.Find\.\.\. key=<nop>
+    macmenu Window.Select\ Next\ Tab key=<nop>
 
     "set macmeta
 
@@ -31,7 +32,6 @@ if has('gui_running')
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
     noremap <d-p> :CtrlP<cr>
-    "map <D-f> /
     imap <D-l> <c-x><c-f><down>
     imap <D-j> <c-n>
     imap <D-k> <c-p>
@@ -39,8 +39,8 @@ if has('gui_running')
   "transparency
   map  <silent> <d-S-[> :set transparency-=1<cr>
   map  <silent> <d-S-]> :set transparency+=1<cr>
-  map  <silent> <d-]> :bnext<cr>
-  map  <silent> <d-[> :bprev<cr>
+  noremap  <silent> <d-]> :bnext<cr>
+  noremap  <silent> <d-[> :bprev<cr>
 
     "inoremap <expr> <d-j> pumvisible() ? '<d-n>' :
           "\ '<c-n><c-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
@@ -66,19 +66,9 @@ if has('gui_running')
     set lines=999 columns=120
     set showbreak=↪
 
-
     "resize windows
     nnoremap <silent> <D-up> :exe "resize " . (winheight(0) * 4/3)<cr>
     nnoremap <silent>  <D-down> :exe "resize " . (winheight(0) * 3/4)<cr>
-
-    "formating withoutth JSbeautify
-    nnoremap <D-f> :JSBeautify<cr>
-    autocmd FileType javascript noremap <buffer>  <d-f> :JSBeautify<cr>
-    " for html
-    autocmd FileType html noremap <buffer> <d-f> :call HtmlBeautify()<cr>
-    " for css or scss
-    autocmd FileType css noremap <buffer> <d-f> :call CSSBeautify()<cr>
-
   end
 else
   "set t_co=256
