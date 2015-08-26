@@ -52,13 +52,14 @@ export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export PATH
 alias d="cd ~/Desktop/"
-alias 7b="cd ~/Desktop/7blazes/git/"
 
 alias zshrc="vim ~/dotfiles/zshrc"
 alias doti="~/dotfiles/"
 alias cls="clear"
 alias pathogen="cd ~/dotfiles/vim/bundle/"
 alias pj="cd ~/Projetos/"
+alias dev="cd ~/Development/"
+alias mk="mkdir"
 
 function new()
 {

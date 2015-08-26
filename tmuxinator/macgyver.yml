@@ -1,8 +1,7 @@
-# ~/.tmuxinator/onetalk.yml
+# ~/.tmuxinator/macgyver.yml
 
-name: onetalk
-root: ~/Development/OneTalk/
-
+name: macgyver
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,10 +21,17 @@ root: ~/Development/OneTalk/
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: logs
 
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t macgyver
+
 windows:
   - editor:
-      layout: c108,238x51,0,0[238x10,0,0,1,238x40,0,11,4]
+      layout: main-vertical
       panes:
-        - gulp tdd
         - vim
-  - server: npm start
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

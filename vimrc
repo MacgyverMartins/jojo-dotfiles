@@ -19,7 +19,7 @@ set clipboard=unnamed
 set ttimeout
 set ttimeoutlen=50
 set notimeout
-let mapleader=" "        " muda o leader para comma
+let mapleader=","        " muda o leader para comma
 set foldmethod=indent
 set foldlevel=99
 set pastetoggle=<F6>

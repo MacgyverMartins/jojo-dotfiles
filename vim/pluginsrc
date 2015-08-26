@@ -281,6 +281,7 @@ let g:indent_guides_exclude_filetypes = ['nerdtree'] "fixes the folding issue on
 let NERDTreeShowBookmarks=1
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
+let NERDTreeQuitOnOpen=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "closes nerdtree on tab
 autocmd FileType nerdtree nmap <tab> q
@@ -589,8 +590,8 @@ nnoremap - :Switch<cr>
 let g:switch_custom_definitions =
       \ [
       \   ['addClass', "removeClass"],
-      \   ['GET', 'POST'] ,
-      \   ['get', 'post'] ,
+      \   ['GET', 'POST', 'PUT', 'DELETE'] ,
+      \   ['get', 'post', 'put', 'delete'] ,
       \   ['left', 'right', 'center'] ,
       \   ['width', 'height'] ,
       \   ['error', 'success', 'warning'] ,
