@@ -112,12 +112,7 @@ rsync -avz -e ssh /Applications/MAMP/htdocs/voandonasasas/ root@198.199.91.77:/v
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
-alias hugme="cd ~/devtools/obvio/hugme/"
-alias one="cd ~/Desktop/OneTalk/onetalk-node/"
-#alias juntos="cd ~/Desktop/Juntos/site/frontend/"
-alias 7blazes="cd ~/Desktop/7blazes/7blazes-components/"
 
-alias undocommit=" git reset --soft HEAD~1"
 
 alias vim="/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/Vim"
 
