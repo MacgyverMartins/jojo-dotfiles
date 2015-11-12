@@ -125,13 +125,16 @@ endsnippet
 #############
 snippet input "Input with Label"
 <label for="${2:${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}}">$1</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="$5"${6: id="${7:$2}"}`!p x(snip)`>
-
 endsnippet
 
 snippet input "XHTML   <input>"
 <input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="$3"${4: id="${5:$2}"}`!p x(snip)`>
 endsnippet
 
+
+snippet label "<label></label>"
+<label for="${2:${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}}">$1</label>
+endsnippet
 
 snippet opt "Option"
 <option${1: value="${2:option}"}>${3:$2}</option>
@@ -188,6 +191,18 @@ endsnippet
 
 snippet h1 "XHTML <h1>"
 <h1 class="${1/[\w\d]+|( )/(?1:_:\L$0\E)/g}">${1}</h1>
+endsnippet
+
+snippet h2 "HTML <h2>" i
+<h2>$0</h2>
+endsnippet
+
+snippet h3 "HTML <h3>" i
+<h3>$0</h3>
+endsnippet
+
+snippet h4 "HTML <h4>" i
+<h4>$0</h4>
 endsnippet
 
 snippet head "XHTML <head>"
@@ -247,6 +262,10 @@ $0
 </ul>
 endsnippet
 
+snippet span "<span>"
+<span>$0</span>
+endsnippet
+
 snippet td "table cell"
 <td>$0</td>
 endsnippet
@@ -281,7 +300,14 @@ snippet movie "Embed QT movie (movie)" b
 </object>
 endsnippet
 
-snippet html5 "HTML5 Template"
+snippet br "HTML <br>"
+<br>${0}
+endsnippet
+
+################
+#  HTML5 Tags  #
+################
+snippet html5 "HTML5 Template" !
 <!DOCTYPE html>
 <html>
 	<head>
@@ -295,6 +321,39 @@ snippet html5 "HTML5 Template"
 		${2}
 	</body>
 </html>
+endsnippet
+
+snippet header "HTML5 <header>"
+<header>
+	${1}
+</header>
+endsnippet
+
+snippet canvas "HTML5 <canvas>" 
+<canvas id="${1:nome_canvas}" width="${2:300}" height="${3:300}">
+</canvas>
+endsnippet
+
+snippet hd "HTML5 <header>"
+<header>
+	${1}
+</header>
+endsnippet
+
+snippet section "HTML5 <section>"
+<section class="${1:className}">
+	${2}
+</section>
+endsnippet
+
+snippet sec "HTML5 <section>"
+<section class="${1:className}">
+	${2}
+</section>
+endsnippet
+
+snippet img "HTML5 <img>"
+<img src="${1:smiley.gif}" alt="${2:Smiley face}"${3: height="42" width="42"}>
 endsnippet
 
 ######################
@@ -401,11 +460,13 @@ endsnippet
 #  Bootstrap  #
 ###############
 
-snippet clb "col-mx ( bootstrap grid class )"
-class="col-xs-12 col-sm-12 col-md-12 col-lg-12"$0
+snippet clb "classes of bootstrap grid (Bootstrap)"
+class="col-xs-${1:12} col-sm-${2:12} col-md-${3:12} col-lg-${4:12}"
 endsnippet
 
-
+snippet offset "col-sm-offset-* (Bootstrap)"
+col-xs-offset-${1:1} col-sm-offset-${2:1} col-md-offset-${3:1} col-lg-offset-${4:1}
+endsnippet
 
 # vim:ft=snippets:
 

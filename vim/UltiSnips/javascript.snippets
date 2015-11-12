@@ -204,7 +204,6 @@ endsnippet
 
 snippet if "if"
 if (${1:condition}) {
-	${VISUAL}
 	$0
 }
 endsnippet
@@ -497,5 +496,41 @@ endsnippet
 snippet am "angular module" b
 angular.module('${1:name}'${2:, [${3}]})${4:;}
 endsnippet
+
+
+
+
+##############
+#  Mongoose  #
+##############
+snippet fbiu "findByIdAndUpdate (Mongoose)" b
+findByIdAndUpdate(${1})
+endsnippet
+
+
+#############
+#  Node.js  #
+#############
+snippet re "require() (Node.js)" !b
+require('${1}');
+endsnippet
+
+snippet vre "require() (Node.js)" !b
+var ${1:nome} = require('${2}');
+endsnippet
+
+snippet mex "module.exports (Node.js)" !b
+module.exports = ${1}
+endsnippet
+
+#############
+#  Gulp.js  #
+#############
+snippet gt "gulp.task() (Gulp)"
+gulp.task('${1:taskName}', ${2:['${3:clean}'], }function() {
+  ${4}
+});
+endsnippet
+
 
 # vim:ft=snippets:

@@ -312,6 +312,9 @@ map <leader>vp :execute("e ".g:configpath."vim/pluginsrc")<cr><c-w>
 "edit e reload rápido
 nnoremap  <leader>so :call LoadingMsg("Loading vimrc...")<cr>:so $MYVIMRC<cr>
 "}}}
+
+au BufRead,BufNewFile *.scss set filetype=scss.css
+
 "Load externals{{{1
 exe ('so '.g:configpath.'vim/pluginsrc')
 exe ('so '.g:configpath.'vim/mappingsrc')

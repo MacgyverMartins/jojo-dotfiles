@@ -69,6 +69,12 @@ snippet bs "box-shadow" b
 box-shadow: ${1:${2:inset} ${3:0}px ${4:1}px ${5:0}px ${6:rgba(0,0,0,.3)} ${7}};
 endsnippet
 
+snippet bxs "box-size" b
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+endsnippet
+
 snippet bry "Description" 
 -webkit-border-radius:  ${1:5}px;
 -moz-border-radius:  $1px;
@@ -111,7 +117,7 @@ snippet bt "border-top" b
 border-top: ${1:${2:1}px ${3:solid} ${4:#ccc} ${5}};
 endsnippet
 
-snippet b "Description" b
+snippet b "Description" 
 border: ${1:${2:1}px ${3:solid} ${4:#ccc} ${5}};
 endsnippet
 
