@@ -40,15 +40,15 @@ for file in ~/dotfiles/{extra,exports,aliases,functions}; do
   [ -r "$file" ] && source "$file"
 done
 
-
 # Customize to your needs...
 export PATH=$HOME/local/bin:$PATH
 export PATH=usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH"
 export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export PATH
 alias d="cd ~/Desktop/"
@@ -129,6 +129,15 @@ alias edit='vim `git ls-files -m` -p'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #wercker config
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+#export DOCKER_HOST=tcp://192.168.59.103:2376
+#export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+#export DOCKER_TLS_VERIFY=1
+
+export ONACADEMY_DEV_DATABASE_URL='mongodb://localhost/startup-learn-dev'
+export ONACADEMY_COOKIE_SECRET='shhhh-86l9=8:$C%MCE_z7-x,8gBhlC700rI'
+export ONACADEMY_SECRET='s{Hw8m59odr0z^wH3,0282hi%A@>yd'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

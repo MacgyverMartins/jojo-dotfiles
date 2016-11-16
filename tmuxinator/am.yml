@@ -1,7 +1,7 @@
-# ~/.tmuxinator/onetalk.yml
+# ~/.tmuxinator/g.yml
 
-name: Mosk Workflow
-root: ~/Development/Moskfy
+name: Automobi APIs
+root: ~/Development/automobi
 
 
 # Optional tmux socket
@@ -23,11 +23,22 @@ root: ~/Development/Moskfy
 # startup_window: logs
 
 windows:
-  - editor:
-      layout: c108,238x51,0,0[238x10,0,0,1,238x40,0,11,4]
+  - guardian:
+      root: '~/Development/automobi/guardian'
+      layout: main-vertical
       panes:
         - vim
-  - server: cd moskfy-core && npm start
-  - admin: cd moskfy-admin && gulp dev
-  - mongodb: mongod
-  - git: git st
+        - npm start
+  - dealer:
+      root: '~/Development/automobi/dealer'
+      layout: main-vertical
+      panes:
+        - vim
+        - npm start
+        -
+  - master:
+      root: '~/Development/automobi/master'
+      layout: main-vertical
+      panes:
+        - vim
+        - npm start

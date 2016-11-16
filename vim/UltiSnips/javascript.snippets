@@ -398,6 +398,13 @@ ${2:angular.module('${3:app}')}.controller('${1:Ctrl}', ['$scope','$rootScope', 
 }]);
 endsnippet
 
+snippet controller "Angular Controller Simple" !b
+${2:angular.module('${3:app}')}
+.controller('${1:Ctrl}', function($scope) {
+	$4
+});
+endsnippet
+
 snippet directive "Angular Directive" !b
 'use strict';
 ${2:angular.module('${3:app}')}.directive('${1:directiveName}', ['$timeout', '$compile', '$filter', '$rootScope',     function( $timeout, $compile, $filter, $rootScope) {
@@ -460,7 +467,63 @@ $rootScope.$on('${1:eventName}', function(e, attr) {
 		});
 endsnippet
 
+##################################
+#  Angular Johnpapa Style Guide  #
+##################################
+snippet jpcontroller "Angular Controller JP" !b
+(function() {
+  'use strict';
 
+  angular
+    .module('${1:moduleName}')
+    .controller('${2:NameController}', ${2/[\w\d]+|( )/(?1:_:\$0)/g});
+
+  /** @ngInject */
+  function ${2/[\w\d]+|( )/(?1:_:\$0)/g}() {
+    var vm = this;
+  }
+})();
+endsnippet
+
+snippet then ".then() and .cacth()"
+.then(function(${1:rs}) {
+	${4}
+})
+${2:.catch(function(${3:err}) {
+})}
+endsnippet
+
+snippet jpdirective "Angular Directive JP" !b
+(function() {
+  'use strict';
+
+  angular
+    .module('${1:moduleName}')
+    .directive('${2:nameDirective}', ${2/[\w\d]+|( )/(?1:_:\$0)/g});
+
+  /** @ngInject */
+  function ${2/[\w\d]+|( )/(?1:_:\$0)/g}() {
+    var directive = {
+      restrict: 'E',
+      templateUrl: '${3:path/to/file}.html',
+      scope: {
+        creationDate: '='
+      },
+      controller: ${4:NameController},
+      controllerAs: 'vm',
+      bindToController: true
+    };
+
+    return directive;
+
+    /** @ngInject */
+    function ${4/[\w\d]+|( )/(?1:_:\$0)/g}($timeout) {
+      var vm = this;
+    }
+  }
+
+})();
+endsnippet
 
 ##########################
 #  UI-VIEW NG-extension  #
@@ -523,6 +586,11 @@ snippet mex "module.exports (Node.js)" !b
 module.exports = ${1}
 endsnippet
 
+snippet exp "exports.name (Node.js)" !b
+exports.${1:name} = function (${2:args}) {
+	${3:return;}
+};
+endsnippet
 #############
 #  Gulp.js  #
 #############
@@ -532,5 +600,25 @@ gulp.task('${1:taskName}', ${2:['${3:clean}'], }function() {
 });
 endsnippet
 
+#######################
+#  Node.js e Express  #
+#######################
+snippet exportcrud "exports.create|read|update|delete"
+exports.${1:get} = function(req, res) {
+  return res.status(200).end();
+};
+
+exports.${2:create} = function(req, res) {
+  return res.status(200).end();
+};
+
+exports.${3:update} = function(req, res) {
+  return res.status(200).end();
+};
+
+exports.${4:remove} = function(req, res) {
+  return res.status(200).end();
+};
+endsnippet
 
 # vim:ft=snippets:

@@ -1,0 +1,298 @@
+Last login: Tue Oct 11 21:13:27 on console
+N/A: version "v4.2.6" is not yet installed
+                                                                                
+macgyver: ~                                                
+→ cls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ mux dev
+/Library/Ruby/Site/2.0.0/rubygems/dependency.rb:298:in `to_specs': Could not find 'tmuxinator' (>= 0) among 50 total gem(s) (Gem::LoadError)
+	from /Library/Ruby/Site/2.0.0/rubygems/dependency.rb:309:in `to_spec'
+	from /Library/Ruby/Site/2.0.0/rubygems/core_ext/kernel_gem.rb:53:in `gem'
+	from /usr/local/bin/mux:22:in `<main>'
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ rvm use system 
+Now using system ruby.
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ cl
+zsh: command not found: cl
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ cls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ mux dev        
+arranging in: main-vertical
+arranging in: main-vertical
+[detached (from session Start)]
+fa^[^[                                                                                                                                                                                                              
+macgyver: ~                                                                                                                                                                                    
+→ mux dev
+[detached (from session Start)]
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+→ mux dev
+[detached (from session Start)]
+                                                                                                                                                                                                                  
+macgyver: ~                                                                                                                                                                                  
+→ cls
+
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ cls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ mux dev
+^[[O[detached (from session Start)]
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+→ mxu dev
+zsh: command not found: mxu
+                                                                                                                                                                                                                    
+macgyver: ~                                                                                                                                                                                    
+→ mux dev
+
+ Start                                        1  npm  2  ../automobi/CRM  *  3  mongod  4  ..ment/automobi                                        17:55  Fri  2016  MacBook-Pro-de-Macgyver.local 
+ pending.html   pending.controller.js+   pending-edit.html | sidebar.html | core.module.js ...|                                   buffers │s
+S> 16   }                                                                                                                                   │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+   17                                                                                                                                       │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+S> 18   function PendingEditCtrl($scope, Restangular, Schedule) {                                                                           │s
+S> 19   ¦ console.log('sch', Schedule);                                                                                                     │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+S> 20   ¦ $scope.schedule = Schedule;                                                                                                       │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+S> 21   ¦ $scope.schedule.local = $scope.schedule.city + ' - ' + $scope.schedule.stateInitials;                                             │s
+S> 22   ¦ $scope.customer = Schedule.idVehicle.idUser;                                                                                      │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+   23                                                                                                                                       │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+S> 24   ¦ $scope.schedule.dateStr = moment(Schedule.date).format('DD/MM/YYYY');                                                             │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+   25                                                                                                                                       │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+S> 26   ¦ $scope.form = {};                                                                                                                 │s
+S> 27   ¦ $scope.form.date = moment(Schedule.date).toDate();                                                                                │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+S> 28   ¦ var time = Schedule.hour.split(':');                                                                                              │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+   29                                                                                                                                       │s
+S> 30   ¦ $scope.form.time = new Date(Schedule.date);                                                                                       │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+S> 31   ¦ $scope.form.time.setHours(time[0])                                                                                                │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+S> 32   ¦ $scope.form.time.setMinutes(time[1]);                                                                                             │s
+   33                                                                                                                                       │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+   34   ¦ //$scope.form.time = moment(Schedule.date)                                                                                        │[gulp-patterns] File changed: client/app/schedules/pending.controller.j
+   35   ¦ //.set('hour', time[0])                                                                                                           │s
+   36   ¦ //.set('minutes', time[1]);                                                                                                       │[gulp-patterns] Browser Connected: Chrome, version: 53.0.2785.143
+   37                                                                                                                                       │
+S> 38   ¦ $scope.mytime = new Date();                                                                                                       ├───────────────────────────────────────────────────────────────────────
+   39                                                                                                                                       │ M client/app/schedules/pending-edit.html
+S> 40   ¦ $scope.hstep = 1;                                                                                                                 │ M client/app/schedules/pending.controller.js
+   41                                                                                                                                       │                                                                       
+S> 42   ¦ $scope.mstep = 15;                                                                                                                │macgyver: ~/Development/automobi/CRM  +[git:master] 
+   43                                                                                                                                       │→ git cm -am "populando form para agendamento"
+S> 44   ¦ $scope.ismeridian = false;                                                                                                        │[master 3dba77e] populando form para agendamento
+   45                                                                                                                                       │ 3 files changed, 135 insertions(+), 74 deletions(-)
+S> 46   ¦ if (Schedule.services.length > 0) {                                                                                               │ rewrite client/app/schedules/pending-edit.html (78%)
+S> 47   ¦ ¦ $scope.schedule.servicesStr = _.map(Schedule.services, 'name').join(" , ");                                                     │                                                                       
+S> 48   ¦ }                                                                                                                                 │macgyver: ~/Development/automobi/CRM [git:master] 
+   49                                                                                                                                       │→    
+S> 50   ¦ $scope.canSubmit = function() {                                                                                                   ├───────────────────────────────────────────────────────────────────────
+S> 51   ¦ ¦ return $scope.form_constraints.$valid;                                                                                          │16:46:13 [304]: /app/form/validation.html
+S> 52   ¦ };                                                                                                                                │16:46:13 [404]: /scripts/angular-messages.min.js.map
+   53                                                                                                                                       │16:46:13 [404]: /scripts/angular-scroll.min.js.map
+S> 54   ¦ $scope.submitForm = function() {                                                                                                  │16:46:13 [304]: /images/g1.jpg
+S> 55   ¦ ¦ console.log('form', $scope.form_constraints);                                                                                   │16:46:13 [304]: /bower_components/material-design-iconic-font/dist/font
+S> 56   ¦ ¦ Schedule.date = moment($scope.form.date).format('YYYY-MM-DD');                                                                  │s/Material-Design-Iconic-Font.woff2?v=2.2.0
+S> 57   ¦ ¦ Schedule.hour = moment($scope.form.time).format('HH:mm');                                                                       │16:46:13 [304]: /bower_components/font-awesome/fonts/fontawesome-webfon
+S> 58   ¦ ¦ Schedule.partner = $scope.form.required_partner;                                                                                │t.woff2?v=4.6.3
+S> 59   ¦ ¦ Schedule.address = $scope.form.required_address;                                                                                │16:46:13 [304]: /styles/ui/images/flags.png
+ NORMAL   master  pending.controller.js[+]                          javascript  utf-8[unix]   77%   56: 60   [Syntax: line:2 (47)]  │17:17:48 [200]: /app/page/signin.html
+No matching autocommands                                                                                                                    │

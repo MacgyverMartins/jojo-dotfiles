@@ -1,7 +1,7 @@
-# ~/.tmuxinator/onetalk.yml
+# ~/.tmuxinator/g.yml
 
-name: Mosk Workflow
-root: ~/Development/Moskfy
+name: Automobi
+root: ~/Development/automobi/
 
 
 # Optional tmux socket
@@ -24,10 +24,10 @@ root: ~/Development/Moskfy
 
 windows:
   - editor:
-      layout: c108,238x51,0,0[238x10,0,0,1,238x40,0,11,4]
       panes:
         - vim
-  - server: cd moskfy-core && npm start
-  - admin: cd moskfy-admin && gulp dev
-  - mongodb: mongod
-  - git: git st
+  - databse:
+      layout: main-vertical
+      panes:
+        -
+        -

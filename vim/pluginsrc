@@ -666,7 +666,7 @@ endif
 "}}}
 "Nyancat                                                                                                      Config {{{1
 "if exists(':Nyancat2')
-  au VimEnter * :Megaman
+  "au VimEnter * :Megaman
 "endif 
 let g:nyancat_display_statusline = 1
 "}}}
