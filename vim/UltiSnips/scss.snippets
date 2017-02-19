@@ -1,3 +1,21 @@
+snippet csh "@mixin" !b
+/*
+ * ${1:Component section heading}
+ */
+
+${2}
+endsnippet
+
+snippet cshd "@mixin" !b
+/*
+ * ${1:Component section heading}
+ *
+ * ${2:Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.}
+ */
+
+${3}
+endsnippet
+
 snippet mix "@mixin" !b
 @mixin ${1:mixinName}(${2:$var})$0
 endsnippet
@@ -413,3 +431,17 @@ snippet before ":before" !b
 &:before
 ${1}
 endsnippet
+
+
+snippet cmh "comment Header" !b
+
+/*** ${1:HEADER}
+**** ${2:Header principal do site}
+***/
+
+endsnippet
+
+snippet cm "comment" !b
+/** ${1} **/
+endsnippet
+

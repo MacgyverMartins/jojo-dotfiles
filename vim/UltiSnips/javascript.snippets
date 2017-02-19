@@ -578,18 +578,24 @@ snippet re "require() (Node.js)" !b
 require('${1}');
 endsnippet
 
-snippet vre "require() (Node.js)" !b
+snippet vre "require() (Node.js)" !
 var ${1:nome} = require('${2}');
 endsnippet
 
 snippet mex "module.exports (Node.js)" !b
-module.exports = ${1}
+module.exports = function(${1}) {
+	${2}
+}
 endsnippet
 
 snippet exp "exports.name (Node.js)" !b
 exports.${1:name} = function (${2:args}) {
 	${3:return;}
 };
+endsnippet
+
+snippet pr "path.resolve (Node.js)" !
+path.resolve(${1:__dirname,});
 endsnippet
 #############
 #  Gulp.js  #
@@ -621,4 +627,12 @@ exports.${4:remove} = function(req, res) {
 };
 endsnippet
 
+##############
+#  Ember.js  #
+##############
+snippet test "test (Ember.js)" !
+test('${1:should ${2}}', function (assert) {
+	${3}
+});
+endsnippet
 # vim:ft=snippets:

@@ -9,6 +9,7 @@ stty -ixon
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="jojo"
+#ZSH_THEME="sunrise"
 export EDITOR='vim'
 #source ~/dotfiles/tmux/completion/tmuxinator.zsh
 
@@ -123,6 +124,7 @@ alias todo='python ~/t/t.py --task-dir ~/tasks --list tasks'
 alias todotxt='todo.sh'
 alias t='todotxt-machine'
 alias edit='vim `git ls-files -m` -p'
+alias chr='open -a "Google Chrome" '
 
 
 ### Added by the Heroku Toolbelt

@@ -16,6 +16,9 @@ filetype plugin indent on
 syntax on
 syntax enable
 set clipboard=unnamed
+"if $TMUX == ''
+ "set clipboard+=unnamed
+"endif
 set ttimeout
 set ttimeoutlen=50
 set notimeout

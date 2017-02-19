@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/jojo/Desktop/7blazes/git/7blazes-site/blazy/admin/app'
 let g:netrw_dirhist_2='/Users/jojo/Desktop/nyancat-vim'
 let g:netrw_dirhist_3='/Users/jojo/Desktop'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/jojo'
 let g:netrw_dirhist_5='/Users/jojo/dotfiles/vim/bundle/megaman-vim'
 let g:netrw_dirhist_6='/Users/macgyvermartins/Projetos/macgyvermartins'
 let g:netrw_dirhist_7='/Users/macgyvermartins/Development/automobi/dealer/lib/node-util'
+let g:netrw_dirhist_8='/Users/macgyvermartins/Development/automobi/CRM/persistence-god'

@@ -1,5 +1,0 @@
-pane	onetalk	1	:~/Projetos/core	0	:-	1	:/Users/macgyvermartins/Projetos/core/frontend/src/test/unit	1	Vim	:/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/Vim
-pane	onetalk	3	:gulp	1	:*	1	:/Users/macgyvermartins/Projetos/core	1	node	:gulp  
-window	onetalk	1	0	:-	adff,141x31,0,0,2
-window	onetalk	3	1	:*	ae01,141x31,0,0,4
-state	onetalk	
