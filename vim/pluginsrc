@@ -167,10 +167,13 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'Shougo/unite.vim'
 Plug 'othree/html5.vim', {'for': 'html'}
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'posva/vim-vue', {'for': 'vue'}
 ""Plug 'hokaccha/vim-html5validator', {'for': 'html'}
 Plug 'csscomb/vim-csscomb', {'for': ['css', 'less', 'sass', 'stylus']}
 "Plug 'Quramy/vison'
 "}}}
+
+
 call plug#end()
 filetype plugin indent on    " required
 
@@ -608,6 +611,8 @@ let g:switch_custom_definitions =
       \   ['radio', 'checkbox'],
       \   ['min', 'max'],
       \   ['unshift', 'push'],
+      \   ['find', 'findOne', 'findById'],
+      \   ['findOneAndRemove', 'findOneAndUpdate', 'findOneAndUpdate'],
       \   {
       \     '"\(\k\+\)"':                '''\1''',
       \     '''\(\k\+\)''':              '"\1"\2',

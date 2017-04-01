@@ -5,7 +5,13 @@
 extends javascript
 
 snippet des "Describe (js)" b
-describe('${1:description}', function() {
+describe('${1:description}', () => {
+	$0
+});
+endsnippet
+
+snippet ait "async it (js)" b
+it('${1:description}', (done) => {
 	$0
 });
 endsnippet
@@ -17,13 +23,13 @@ it('${1:description}', function() {
 endsnippet
 
 snippet bef "before each (js)" b
-beforeEach(function() {
+beforeEach(done => {
 	$0
 });
 endsnippet
 
 snippet aft "after each (js)" b
-afterEach(function() {
+afterEach(() => {
 	$0
 });
 endsnippet

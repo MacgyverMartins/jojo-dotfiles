@@ -570,6 +570,12 @@ snippet fbiu "findByIdAndUpdate (Mongoose)" b
 findByIdAndUpdate(${1})
 endsnippet
 
+snippet mq "mongoose query (Mongoose)" b
+${1:Model}.${2:find}(${3:query}, (err, ${4:list}) => {
+	${5:if (err) return ${6:res.status(500);}}
+	${7}
+})
+endsnippet
 
 #############
 #  Node.js  #
@@ -579,7 +585,7 @@ require('${1}');
 endsnippet
 
 snippet vre "require() (Node.js)" !
-var ${1:nome} = require('${2}');
+var ${1/[\a]/(?1:_:$0)/g} = require('${1:name}');
 endsnippet
 
 snippet mex "module.exports (Node.js)" !b
@@ -594,9 +600,32 @@ exports.${1:name} = function (${2:args}) {
 };
 endsnippet
 
+snippet rexp "exports.name req and res (Node.js)" !b
+exports.${1:name} = function (req, res) {
+	${3:return res.status(200).json({success: true});}
+};
+endsnippet
+
 snippet pr "path.resolve (Node.js)" !
 path.resolve(${1:__dirname,});
 endsnippet
+
+snippet qex "query.exec (Mongoose.js)" !
+query.exec(function(err, ${1:data}) {
+	if (err) return res._sendError(500);
+	return res.status(200).json({});
+});
+endsnippet
+
+snippet c "const require() (Node.js)" !b
+const ${1:name} = require('${2:name}');
+endsnippet
+
+snippet cre "const require() (Node.js)" !b
+const ${1/[a-z]+|( )/(?1:_:$0)/g} = require('${1:name}');
+endsnippet
+
+
 #############
 #  Gulp.js  #
 #############
